@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Napat Phopwanditrakun - Computer Science Student Portfolio | Frontend Developer | Flutter Developer">
+    <meta name="keywords" content="portfolio, computer science, frontend developer, flutter, node.js, internship">
+    <meta name="author" content="Napat Phopwanditrakun">
+    <title>Portfolio-Naphat.dev</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h3>Loading Portfolio...</h3>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">Naphat.dev</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-card">
+            <i class="fas fa-code"></i>
+        </div>
+        <div class="floating-card">
+            <i class="fas fa-mobile-alt"></i>
+        </div>
+        <div class="floating-card">
+            <i class="fas fa-database"></i>
+        </div>
+        <div class="hero-content">
+            <h1>Naphat Phopwandeetakul</h1>
+            <h2>นักศึกษาปี 4 สาขาวิทยาการคอมพิวเตอร์</h2>
+            <p>นักศึกษาวิทยาการคอมพิวเตอร์ปี 4 ที่มีความสนใจในการพัฒนา Front End
+                มองหาโอกาสในการฝึกงานเพื่อนำความรู้ที่เรียนมาไปประยุกต์ใช้ในโลกแห่งความเป็นจริงและพัฒนาทักษะในการทำงานเป็นทีม
+            </p>
+            <a href="#projects" class="cta-button">ดูผลงานของฉัน</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="profile-card fade-in">
+                <div class="profile-image">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>ณพัชธิ์ พบวันดีตระกุลฒ์</h3>
+                <p>นักศึกษาปี 4 สาขาวิทยาการคอมพิวเตอร์</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>099-XXX-XX60</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>65011212163@msu.ac.th</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mahasarakham, Thailand</span>
+                    </div>
+                    <div class="contact-item github-item">
+                        <i class="fab fa-github"></i>
+                        <span><a href="https://github.com/Naphdev" target="_blank">https://github.com/Naphdev</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text fade-in">
+                <p>นักศึกษาวิทยาการคอมพิวเตอร์ปี 4 ที่มีความสนใจในการพัฒนา Front End
+                    มองหาโอกาสในการฝึกงานเพื่อนำความรู้ที่เรียนมาไปประยุกต์ใช้ในโลกแห่งความเป็นจริงและพัฒนาทักษะในการทำงานเป็นทีม
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <h2 class="section-title">ทักษะด้านเทคนิค</h2>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-palette"></i> Frontend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Angular</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-server"></i> Backend (เบื้องต้น)</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-tools"></i> Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-database"></i> Database</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB (พื้นฐาน)</span>
+                    <span class="skill-tag">Firebase</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">Mobile UI/UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <h2 class="section-title">โปรเจกต์ที่เคยทำ</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <i class="fas fa-utensils"><img src="images/Delivery-img.png" alt="Food"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">แอปสั่งอาหารออนไลน์ (Flutter + Node.js)</h3>
+                    <p class="project-description">พัฒนาแอปสั่งอาหารพร้อมระบบติดตามการจัดส่งแบบ Real-time ใช้ Flutter
+                        สำหรับ Mobile App และ Node.js + MongoDB สำหรับ Backend API</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1AWmErH2X9fTOUJaFEmAD554eYbcdcx8-/view?usp=sharing"
+                            class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            ดาวน์โหลด APK
+                        </a>
+                        <div class="github-dropdown">
+                            <a href="#" class="project-link secondary github-btn">GitHub</a>
+                            <div class="github-dropdown-content">
+                                <a href="https://github.com/Fulrr/Delivery-App-Frontend" target="_blank">Frontend (Flutter)</a>
+                                <a href="https://github.com/Fulrr/Delivery-App-Backend" target="_blank">Backend (Node.js)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <i class="fas fa-images">
+                        <img src="images/facemask-img.png" alt="FaceMash">
+                    </i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">แอป FaceMash (Angular + Node.js + MongoDB)</h3>
+                    <p class="project-description">พัฒนาแอปเปรียบเทียบรูปภาพแบบ Voting System พร้อมระบบจัดอันดับ ELO
+                        Rating ใช้ Angular 17 + Material UI สำหรับ Frontend และ Node.js + MongoDB สำหรับ Backend API</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Angular 17</span>
+                        <span class="tech-tag">Material UI</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">ELO Rating</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://frontend-facemash.vercel.app/?userId=689c968e3e211cf5a9a64791" class="project-link primary" target="_blank">
+                            เปิดเว็บแอป
+                        </a>
+                        <div class="github-dropdown">
+                            <a href="#" class="project-link secondary github-btn">GitHub</a>
+                            <div class="github-dropdown-content">
+                                <a href="https://github.com/Naphdev/frontend-facemash" target="_blank">Frontend (Angular)</a>
+                                <a href="https://github.com/Naphdev/backend-Facemash-app" target="_blank">Backend (Node.js)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <i class="fas fa-ticket-alt">
+                        <img src="images/lotto.png" alt="Lottery">
+                    </i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">ระบบซื้อ-ขายลอตเตอรี่ออนไลน์ (Flutter + Node.js)</h3>
+                    <p class="project-description">พัฒนาแอปพลิเคชันระบบซื้อ-ขายลอตเตอรี่ออนไลน์ พร้อมระบบตรวจรางวัลและระบบจัดการกระเป๋าเงิน 
+                        ใช้ Flutter สำหรับ Mobile App และ Node.js + MongoDB สำหรับ Backend API</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Material Design</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Express.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1T1fC3CiO2tt7T_35rJVFLIWiuQJjHhRP/view?usp=sharing" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                            ดาวน์โหลด APK
+                        </a>
+                        <div class="github-dropdown">
+                            <a href="#" class="project-link secondary github-btn">GitHub</a>
+                            <div class="github-dropdown-content">
+                                <a href="https://github.com/Fulrr/Lottery-App-Frontend" target="_blank">Frontend (Flutter)</a>
+                                <a href="https://github.com/Naphdev/backend-lotto_app" target="_blank">Backend (Node.js)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
+        <h2 class="section-title">ประวัติการศึกษา</h2>
+        <div class="education-content fade-in">
+            <div class="education-item">
+                <h3 class="education-title">มหาวิทยาลัยมหาสารคาม</h3>
+                <p class="education-subtitle">คณะวิทยาการสารสนเทศ สาขาวิทยาการคอมพิวเตอร์</p>
+                <div class="education-details">
+                    <div class="education-detail">
+                        <i class="fas fa-calendar"></i>
+                        <span>2568 - ปัจจุบัน (ชั้นปีที่ 4)</span>
+                    </div>
+                    <div class="education-detail">
+                        <i class="fas fa-star"></i>
+                        <span>เกรดเฉลี่ยสะสม: 2.98</span>
+                    </div>
+                </div>
+            </div>
+            <div class="education-item">
+                <h3 class="education-title">National Software Contest: NSC 2025</h3>
+                <p class="education-subtitle">การแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์แห่งประเทศไทย ครั้งที่27</p>
+                <div class="education-details">
+                    <div class="education-detail">
+                        <i class="fas fa-trophy"></i>
+                        <span>ได้รับทุนจำนวน 2000</span>
+                    </div>
+                    <div class="education-detail">
+                        <i class="fas fa-calendar"></i>
+                        <span>2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="social-links">
+            <a href="https://github.com/Naphdev" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:65011212163@msu.ac.th" class="social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:099-XXX-XX60" class="social-link">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p>ต้องการฝึกงานเพื่อพัฒนาทักษะการพัฒนาเว็บไซต์จริงในโลกแห่งความเป็นจริง</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2025 ณพัชธิ์ พบวันดีตระกุลฒ์. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
