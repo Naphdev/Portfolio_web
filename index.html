@@ -38,6 +38,7 @@
             <a href="#" class="logo">Naphat.dev</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
@@ -78,10 +79,11 @@
         <div class="about-content">
             <div class="profile-card fade-in">
                 <div class="profile-image">
+                    <img src="images/profile_image.png" alt="profile-image">
                     <i class="fas fa-user"></i>
                 </div>
                 <h3>ณพัชธิ์ พบวันดีตระกุลฒ์</h3>
-                <p>นักศึกษาปี 4 สาขาวิทยาการคอมพิวเตอร์</p>
+                <p>นักศึกษาระดับปริญญาตรี ชั้นปีที่ 4 สาขา Computer Science</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -107,12 +109,75 @@
                 </div>
             </div>
             <div class="about-text fade-in">
-                <p>นักศึกษาวิทยาการคอมพิวเตอร์ปี 4 ที่มีความสนใจในการพัฒนา Front End
-                    มองหาโอกาสในการฝึกงานเพื่อนำความรู้ที่เรียนมาไปประยุกต์ใช้ในโลกแห่งความเป็นจริงและพัฒนาทักษะในการทำงานเป็นทีม
-                </p>
+                <div class="interest-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>ตำแหน่งที่สนใจ</h3>
+                <div class="interest-tags">
+                    <span class="interest-tag">Frontend Developer</span>
+                    <!-- <span class="interest-tag">Flutter Developer</span>
+                    <span class="interest-tag">Web Developer</span>
+                    <span class="interest-tag">Mobile Developer</span> -->
+                    <span class="interest-tag">Full-Stack Developer</span>
+                </div>
+                <div class="interest-description">
+                    <p>มองหาโอกาสในการฝึกงานเพื่อนำความรู้ที่เรียนมาไปประยุกต์ใช้ในโลกแห่งความเป็นจริงและพัฒนาทักษะในการทำงานเป็นทีม</p> 
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Resume Section HTML -->
+    <section class="resume-section section" id="resume">
+        <h2 class="section-title">Resume</h2>
+        <div class="resume-content">
+            <div class="resume-card fade-in">
+                <div class="resume-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3 class="resume-title">ประวัติส่วนตัว</h3>
+                <p class="resume-description">
+                    ดาวน์โหลดหรือดู Resume ของฉันเกี่ยวกับประสบการณ์การศึกษา ทักษะ และผลงาน
+                    พร้อมรายละเอียดการติดต่อสำหรับโอกาสการฝึกงานและการทำงาน
+                </p>
+                <div class="resume-buttons">
+                    <a href="#" class="resume-btn resume-btn-primary" onclick="viewResume()">
+                        <i class="fas fa-eye"></i>
+                        ดู Resume
+                    </a>
+                    <a href="flie/Resume.pdf" class="resume-btn resume-btn-secondary"
+                        download="Naphat_Phopwandeetakul_Resume.pdf">
+                        <i class="fas fa-download"></i>
+                        ดาวน์โหลด PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Modal HTML -->
+    <div id="resumeModal" class="resume-modal">
+        <div class="resume-modal-content">
+            <div class="resume-modal-header">
+                <h3 class="resume-modal-title">
+                    <i class="fas fa-file-pdf"></i>
+                    Resume - ณพัชธิ์ พบวันดีตระกุลฒ์
+                </h3>
+                <button class="resume-modal-close" onclick="closeResumeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="resume-modal-body">
+                <div id="resumeLoading" class="resume-loading">
+                    <div style="text-align: center;">
+                        <i class="fas fa-spinner"></i>
+                        <p>กำลังโหลด Resume...</p>
+                    </div>
+                </div>
+                <iframe id="resumeIframe" class="resume-iframe" style="display: none;" src=""></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- Skills Section -->
     <section class="skills section" id="skills">

@@ -234,3 +234,52 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
+
+// Resume Modal Functions
+function viewResume() {
+    const modal = document.getElementById('resumeModal');
+    const iframe = document.getElementById('resumeIframe');
+    const loading = document.getElementById('resumeLoading');
+    
+    // Show modal
+    modal.style.display = 'block';
+    
+    // Show loading
+    loading.style.display = 'flex';
+    iframe.style.display = 'none';
+    
+    // Set iframe src (replace with your resume PDF URL)
+    iframe.src = 'flie/Resume.pdf'; // Ensure this path is correct
+    
+    // Handle iframe load
+    iframe.onload = function() {
+        loading.style.display = 'none';
+        iframe.style.display = 'block';
+    };
+}
+
+function closeResumeModal() {
+    const modal = document.getElementById('resumeModal');
+    const iframe = document.getElementById('resumeIframe');
+    
+    modal.style.display = 'none';
+    iframe.src = ''; // Clear iframe to stop loading
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('resumeModal');
+    if (event.target === modal) {
+        closeResumeModal();
+    }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('resumeModal');
+        if (modal.style.display === 'block') {
+            closeResumeModal();
+        }
+    }
+});
