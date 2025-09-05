@@ -283,3 +283,99 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+
+// Certificate Modal Functions
+function showCertificate(certificateType) {
+    const modal = document.getElementById('certificateModal');
+    const loading = document.getElementById('certificateLoading');
+    const content = document.getElementById('certificateContent');
+    const image = document.getElementById('certificateImage');
+    
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    // Show loading
+    loading.style.display = 'flex';
+    content.style.display = 'none';
+    
+    // Simulate loading time and set certificate PDF
+    setTimeout(() => {
+        if (certificateType === 'nsc2025') {
+            // Hide the image container and show PDF viewer
+            const imageContainer = document.querySelector('.certificate-image-container');
+            imageContainer.innerHTML = `
+                <iframe src="flie/CertSecondRound_ณพัชธิ์_034.pdf" 
+                        width="100%" 
+                        height="100%" 
+                        style="border: none; min-height: calc(100vh - 200px);">
+                    <p>เบราว์เซอร์ของคุณไม่รองรับการแสดง PDF 
+                    <a href="flie/CertSecondRound_ณพัชธิ์_034.pdf" target="_blank">คลิกที่นี่เพื่อดาวน์โหลด</a></p>
+                </iframe>
+            `;
+        }
+        
+        // Hide loading and show content
+        loading.style.display = 'none';
+        content.style.display = 'block';
+    }, 1000);
+}
+
+function closeCertificateModal() {
+    const modal = document.getElementById('certificateModal');
+    const imageContainer = document.querySelector('.certificate-image-container');
+    
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    
+    // Clear iframe content to stop loading
+    imageContainer.innerHTML = `
+        <img id="certificateImage" src="" alt="ใบประกาศนียบัตร NSC 2025" class="certificate-image">
+    `;
+}
+
+function downloadCertificate() {
+    // Create a temporary link to download the certificate PDF
+    const link = document.createElement('a');
+    link.href = 'flie/CertSecondRound_ณพัชธิ์_034.pdf';
+    link.download = 'CertSecondRound_ณพัชธิ์_034.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Close certificate modal when clicking outside
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('certificateModal');
+    if (event.target === modal) {
+        closeCertificateModal();
+    }
+});
+
+// Close certificate modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('certificateModal');
+        if (modal.style.display === 'block') {
+            closeCertificateModal();
+        }
+    }
+});
+
+// NSC Demo Function
+function showNSCDemo() {
+    // You can customize this to show a specific demo or redirect to a project
+    // For now, let's show an alert with information about the NSC project
+    alert('NSC 2025 การนำเสนอผลงาน\n\n' +
+          'โครงการ: Onscreen Keyboard ป้องกันการดักจับข้อมูลผ่านแป้นพิมพ์\n\n' +
+          'สถานะ: ผ่านการคัดเลือกรอบนำเสนอผลงาน\n' +
+          'ศูนย์ประสานงานภูมิภาค ภาคตะวันออกเฉียงเหนือ\n\n' +
+          'เทคโนโลยีที่ใช้:\n' +
+          '• Desktop Application (Windows, Linux)\n' +
+          '• Web Application (JavaScript)\n' +
+          '• Browser Extension\n\n' +
+          'คุณสามารถดูรายละเอียดเพิ่มเติมได้ในส่วน Projects หรือติดต่อเพื่อขอ Demo');
+    
+    // Alternative: You can redirect to a specific project or open a modal
+    // window.open('https://your-nsc-project-demo.com', '_blank');
+}
